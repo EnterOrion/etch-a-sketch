@@ -1,0 +1,9 @@
+.row { display: flex;}
+
+.cell { width: 10px; height: 10px; border: 0.25px solid black;}
+
+body { display: flex; align-items: center; justify-content: center; flex-direction: column;}
+
+h6 {margin-top: 0; margin-bottom: 5px;}
+
+h1 {margin-bottom: 5px; margin-top: 3px;}
