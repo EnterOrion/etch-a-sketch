@@ -1,9 +1,24 @@
-.row { display: flex;}
+.container {
+    width: 500px;
+    height: 500px;
+    display: grid;
+}
 
-.cell { width: 10px; height: 10px; border: 0.25px solid black;}
+body { display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        flex-direction: column;}
 
-body { display: flex; align-items: center; justify-content: center; flex-direction: column;}
+h4 {margin-top: 0; 
+    margin-bottom: 5px;}
 
-h6 {margin-top: 0; margin-bottom: 5px;}
+h1 {margin-bottom: 5px; 
+    margin-top: 3px;}
 
-h1 {margin-bottom: 5px; margin-top: 3px;}
+/*.row { 
+    display: flex;
+}
+
+.cell { width: 10px; 
+        height: 10px; 
+        border: 0.25px solid black;}*/

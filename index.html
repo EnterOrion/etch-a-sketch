@@ -10,7 +10,14 @@
 </head>
 <body>
     <h1>ETCH-A-SKETCH</h1>
-    <h6>Draw as much as you like.</h6>
-    <div id="container"></div>
+    <h4>Draw as much as you like.</h4>
+    <div class="container"></div>
+    <div> 
+    <input type="text"
+            placeholder="Change size"
+            value="16"
+            onchange="changeSize(this.value)" />
+    <button>Size</button>
+    </div>
 </body>
 </html>
