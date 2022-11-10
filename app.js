@@ -4,8 +4,10 @@ let container = document.querySelector('.container');
 container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
 container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-for (let i = 0; i < 256; i++) {
+let area = size * size;
+for (let i = 0; i < area; i++) {
   let square = document.createElement("div");
+  square.addEventListener("mousedown", fillColor)
   square.style.backgroundColor = "blue";
   container.insertAdjacentElement("beforeend", square);
 }
@@ -14,19 +16,21 @@ for (let i = 0; i < 256; i++) {
 createGrid(16);
 
 function changeSize(input) {
+  if (input > 64 ) {
+    alert ("Size too big!");
+  }
+  else if (input < 1) {
+    alert ("Size too small!");
+  }
+  else {
   createGrid(input);
+  }
 }
 
+function fillColor() {
+  this.style.backgroundColor = color;
+}
 
-
-//.container.innerHTML =
-  //  .cell.onclick = () => alert("Hello world");
-
-
-//let i=0, n=16;
-
-//container.innerHTML = 
- //   `<div class="row">${'<div class="cell"></div>'.repeat(n)}</div>`
-   // .repeat(n)    
-
-
+function changeColor(selection) {
+  color = selection;
+}
