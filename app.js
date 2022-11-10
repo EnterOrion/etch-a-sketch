@@ -1,8 +1,8 @@
 function createGrid(size) {
 
 let container = document.querySelector('.container');
-container.style.gridTemplateColumns = 'repeat(${size}, 1fr)';
-container.style.gridTemplateRows = 'repeat(${size}, 1fr)';
+container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
 for (let i = 0; i < 256; i++) {
   let square = document.createElement("div");
@@ -16,6 +16,9 @@ createGrid(16);
 function changeSize(input) {
   createGrid(input);
 }
+
+
+
 //.container.innerHTML =
   //  .cell.onclick = () => alert("Hello world");
 
