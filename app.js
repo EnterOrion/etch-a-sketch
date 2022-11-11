@@ -1,3 +1,5 @@
+let color = "black";
+
 function createGrid(size) {
 
 let container = document.querySelector('.container');
@@ -40,4 +42,11 @@ function fillColor() {
 
 function changeColor(selection) {
     color = selection;
+}
+
+
+function clearBoard() {
+  let container = document.querySelector(".container");
+  let squares = container.querySelectorAll("div");
+  squares.forEach((div) => (div.style.backgroundColor = "blue"));
 }
