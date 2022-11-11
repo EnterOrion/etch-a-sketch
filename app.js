@@ -7,7 +7,7 @@ container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 let area = size * size;
 for (let i = 0; i < area; i++) {
   let square = document.createElement("div");
-  square.addEventListener("mousedown", fillColor)
+  square.addEventListener("mousedown", fillColor);
   square.style.backgroundColor = "blue";
   container.insertAdjacentElement("beforeend", square);
 }
@@ -28,9 +28,16 @@ function changeSize(input) {
 }
 
 function fillColor() {
-  this.style.backgroundColor = color;
+  let rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+  if (color == "rainbow") {
+    this.style.backgroundColor = rainbowColors[Math.floor(Math.random() * rainbowColors.length)];
+
+  }
+  else {
+    this.style.backgroundColor = color;
+  }
 }
 
 function changeColor(selection) {
-  color = selection;
+    color = selection;
 }
